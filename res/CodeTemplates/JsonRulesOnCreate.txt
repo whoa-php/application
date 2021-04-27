@@ -1,0 +1,84 @@
+<?php
+
+/*
+ * Copyright 2015-2020 info@neomerx.com
+ * Modification Copyright 2021-2022 info@whoaphp.com
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+declare(strict_types=1);
+
+namespace App\Validation\{%SINGULAR_CC%};
+
+use App\Json\Schemas\{%SINGULAR_CC%}Schema as Schema;
+use App\Validation\{%SINGULAR_CC%}\{%SINGULAR_CC%}Rules as r;
+use Whoa\Flute\Contracts\Validation\JsonApiDataRulesInterface;
+use Whoa\Validation\Contracts\Rules\RuleInterface;
+
+/**
+ * @package App
+ *
+ * @SuppressWarnings(PHPMD.StaticAccess)
+ */
+final class {%SINGULAR_CC%}CreateJson implements JsonApiDataRulesInterface
+{
+    /**
+     * @inheritdoc
+     */
+    public static function getTypeRule(): RuleInterface
+    {
+        return r::{%SINGULAR_LC%}Type();
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public static function getIdRule(): RuleInterface
+    {
+        return r::equals(null);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public static function getAttributeRules(): array
+    {
+        return [
+            Schema::ATTR_TITLE => r::required(r::title()),
+            Schema::ATTR_TEXT  => r::required(r::text()),
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public static function getToOneRelationshipRules(): array
+    {
+        // if relationships validation is needed uncomment and setup rules below
+        return [
+//            Schema::REL_OTHER => r::otherRelationship(),
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public static function getToManyRelationshipRules(): array
+    {
+        // if relationships validation is needed uncomment and setup rules below
+        return [
+//            Schema::REL_OTHERS => r::othersRelationship(),
+        ];
+    }
+}
