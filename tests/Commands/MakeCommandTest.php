@@ -87,28 +87,34 @@ class MakeCommandTest extends TestCase
             ],
             [
                 'QueryRulesOnRead.txt' => '{%SINGULAR_CC%},{%PLURAL_CC%}',
-                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardsReadQuery.php' => 'Board,Boards',
+                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardsReadQuery.php' => 'Board,Boards',
             ],
             [
                 'ApiAuthorization.txt' =>
                     '{%SINGULAR_CC%},{%PLURAL_CC%},{%SINGULAR_UC%},{%PLURAL_UC%},{%SINGULAR_LC%}',
-                DIRECTORY_SEPARATOR . 'policies' . DIRECTORY_SEPARATOR . 'BoardRules.php' => 'Board,Boards,BOARD,BOARDS,board',
+                DIRECTORY_SEPARATOR . 'policies' . DIRECTORY_SEPARATOR .
+                'BoardRules.php' => 'Board,Boards,BOARD,BOARDS,board',
             ],
             [
                 'ValidationRules.txt' => '{%SINGULAR_CC%},{%PLURAL_LC%},{%SINGULAR_LC%}',
-                DIRECTORY_SEPARATOR . 'rules' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardRules.php' => 'Board,boards,board',
+                DIRECTORY_SEPARATOR . 'rules' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardRules.php' => 'Board,boards,board',
             ],
             [
                 'JsonRulesOnCreate.txt' => '{%SINGULAR_CC%},{%SINGULAR_LC%}',
-                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardCreateJson.php' => 'Board,board',
+                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardCreateJson.php' => 'Board,board',
             ],
             [
                 'JsonRulesOnUpdate.txt' => '{%SINGULAR_CC%},{%SINGULAR_LC%}',
-                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardUpdateJson.php' => 'Board,board',
+                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardUpdateJson.php' => 'Board,board',
             ],
             [
                 'JsonController.txt' => '{%SINGULAR_CC%},{%PLURAL_CC%}',
-                DIRECTORY_SEPARATOR . 'json-controllers' . DIRECTORY_SEPARATOR . 'BoardsController.php' => 'Board,Boards',
+                DIRECTORY_SEPARATOR . 'json-controllers' . DIRECTORY_SEPARATOR .
+                'BoardsController.php' => 'Board,Boards',
             ],
             [
                 'JsonRoutes.txt' => '{%SINGULAR_CC%},{%PLURAL_CC%}',
@@ -116,15 +122,18 @@ class MakeCommandTest extends TestCase
             ],
             [
                 'WebRulesOnCreate.txt' => '{%SINGULAR_CC%}',
-                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardCreateForm.php' => 'Board',
+                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardCreateForm.php' => 'Board',
             ],
             [
                 'WebRulesOnUpdate.txt' => '{%SINGULAR_CC%}',
-                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardUpdateForm.php' => 'Board',
+                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardUpdateForm.php' => 'Board',
             ],
             [
                 'WebController.txt' => '{%SINGULAR_CC%},{%PLURAL_CC%},{%PLURAL_LC%},{%PLURAL_UC%}',
-                DIRECTORY_SEPARATOR . 'web-controllers' . DIRECTORY_SEPARATOR . 'BoardsController.php' => 'Board,Boards,boards,BOARDS',
+                DIRECTORY_SEPARATOR . 'web-controllers' . DIRECTORY_SEPARATOR .
+                'BoardsController.php' => 'Board,Boards,boards,BOARDS',
             ],
             [
                 'WebRoutes.txt' => '{%SINGULAR_CC%},{%PLURAL_CC%}',
@@ -163,28 +172,34 @@ class MakeCommandTest extends TestCase
             ],
             [
                 'QueryRulesOnRead.txt' => '{%SINGULAR_CC%},{%PLURAL_CC%}',
-                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardsReadQuery.php' => 'Board,Boards',
+                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardsReadQuery.php' => 'Board,Boards',
             ],
             [
                 'ApiAuthorization.txt' =>
                     '{%SINGULAR_CC%},{%PLURAL_CC%},{%SINGULAR_UC%},{%PLURAL_UC%},{%SINGULAR_LC%}',
-                DIRECTORY_SEPARATOR . 'policies' . DIRECTORY_SEPARATOR . 'BoardRules.php' => 'Board,Boards,BOARD,BOARDS,board',
+                DIRECTORY_SEPARATOR . 'policies' . DIRECTORY_SEPARATOR .
+                'BoardRules.php' => 'Board,Boards,BOARD,BOARDS,board',
             ],
             [
                 'ValidationRules.txt' => '{%SINGULAR_CC%},{%PLURAL_LC%},{%SINGULAR_LC%}',
-                DIRECTORY_SEPARATOR . 'rules' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardRules.php' => 'Board,boards,board',
+                DIRECTORY_SEPARATOR . 'rules' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardRules.php' => 'Board,boards,board',
             ],
             [
                 'JsonRulesOnCreate.txt' => '{%SINGULAR_CC%},{%SINGULAR_LC%}',
-                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardCreateJson.php' => 'Board,board',
+                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardCreateJson.php' => 'Board,board',
             ],
             [
                 'JsonRulesOnUpdate.txt' => '{%SINGULAR_CC%},{%SINGULAR_LC%}',
-                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardUpdateJson.php' => 'Board,board',
+                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardUpdateJson.php' => 'Board,board',
             ],
             [
                 'JsonController.txt' => '{%SINGULAR_CC%},{%PLURAL_CC%}',
-                DIRECTORY_SEPARATOR . 'json-controllers' . DIRECTORY_SEPARATOR . 'BoardsController.php' => 'Board,Boards',
+                DIRECTORY_SEPARATOR . 'json-controllers' . DIRECTORY_SEPARATOR .
+                'BoardsController.php' => 'Board,Boards',
             ],
             [
                 'JsonRoutes.txt' => '{%SINGULAR_CC%},{%PLURAL_CC%}',
@@ -223,28 +238,34 @@ class MakeCommandTest extends TestCase
             ],
             [
                 'QueryRulesOnRead.txt' => '{%SINGULAR_CC%},{%PLURAL_CC%}',
-                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardsReadQuery.php' => 'Board,Boards',
+                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardsReadQuery.php' => 'Board,Boards',
             ],
             [
                 'ApiAuthorization.txt' =>
                     '{%SINGULAR_CC%},{%PLURAL_CC%},{%SINGULAR_UC%},{%PLURAL_UC%},{%SINGULAR_LC%}',
-                DIRECTORY_SEPARATOR . 'policies' . DIRECTORY_SEPARATOR . 'BoardRules.php' => 'Board,Boards,BOARD,BOARDS,board',
+                DIRECTORY_SEPARATOR . 'policies' . DIRECTORY_SEPARATOR .
+                'BoardRules.php' => 'Board,Boards,BOARD,BOARDS,board',
             ],
             [
                 'ValidationRules.txt' => '{%SINGULAR_CC%},{%PLURAL_LC%},{%SINGULAR_LC%}',
-                DIRECTORY_SEPARATOR . 'rules' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardRules.php' => 'Board,boards,board',
+                DIRECTORY_SEPARATOR . 'rules' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardRules.php' => 'Board,boards,board',
             ],
             [
                 'WebRulesOnCreate.txt' => '{%SINGULAR_CC%}',
-                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardCreateForm.php' => 'Board',
+                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardCreateForm.php' => 'Board',
             ],
             [
                 'WebRulesOnUpdate.txt' => '{%SINGULAR_CC%}',
-                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR . 'Board' . DIRECTORY_SEPARATOR . 'BoardUpdateForm.php' => 'Board',
+                DIRECTORY_SEPARATOR . 'validators' . DIRECTORY_SEPARATOR .
+                'Board' . DIRECTORY_SEPARATOR . 'BoardUpdateForm.php' => 'Board',
             ],
             [
                 'WebController.txt' => '{%SINGULAR_CC%},{%PLURAL_CC%},{%PLURAL_LC%},{%PLURAL_UC%}',
-                DIRECTORY_SEPARATOR . 'web-controllers' . DIRECTORY_SEPARATOR . 'BoardsController.php' => 'Board,Boards,boards,BOARDS',
+                DIRECTORY_SEPARATOR . 'web-controllers' . DIRECTORY_SEPARATOR .
+                'BoardsController.php' => 'Board,Boards,boards,BOARDS',
             ],
             [
                 'WebRoutes.txt' => '{%SINGULAR_CC%},{%PLURAL_CC%}',
@@ -526,15 +547,18 @@ class MakeCommandTest extends TestCase
         $fileExpectations = [
             [
                 'Model.txt' => 'content does not matter for this test',
-                DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . 'Board.php' => 'content does not matter for this test',
+                DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR .
+                'Board.php' => 'content does not matter for this test',
             ],
             [
                 'Migration.txt' => 'content does not matter for this test',
-                DIRECTORY_SEPARATOR . 'migrations' . DIRECTORY_SEPARATOR . 'BoardsMigration.php' => 'content does not matter for this test',
+                DIRECTORY_SEPARATOR . 'migrations' . DIRECTORY_SEPARATOR .
+                'BoardsMigration.php' => 'content does not matter for this test',
             ],
             [
                 'Seed.txt' => 'content does not matter for this test',
-                DIRECTORY_SEPARATOR . 'seeds' . DIRECTORY_SEPARATOR . 'BoardsSeed.php' => 'content does not matter for this test',
+                DIRECTORY_SEPARATOR . 'seeds' . DIRECTORY_SEPARATOR .
+                'BoardsSeed.php' => 'content does not matter for this test',
             ],
         ];
 

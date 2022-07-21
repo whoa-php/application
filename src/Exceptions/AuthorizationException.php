@@ -23,6 +23,7 @@ namespace Whoa\Application\Exceptions;
 
 use Whoa\Contracts\Exceptions\AuthorizationExceptionInterface;
 use RuntimeException;
+
 use function assert;
 use function is_int;
 use function is_string;
@@ -35,12 +36,12 @@ class AuthorizationException extends RuntimeException implements AuthorizationEx
     /**
      * @var string
      */
-    private $action;
+    private string $action;
 
     /**
      * @var string|null
      */
-    private $resourceType;
+    private ?string $resourceType;
 
     /**
      * @var string|int|null
@@ -50,7 +51,7 @@ class AuthorizationException extends RuntimeException implements AuthorizationEx
     /**
      * @var array
      */
-    private $extraParameters;
+    private array $extraParameters;
 
     /**
      * @param string $action
@@ -61,11 +62,12 @@ class AuthorizationException extends RuntimeException implements AuthorizationEx
     public function __construct(
         string $action,
         string $resourceType = null,
-               $resourceIdentity = null,
-        array  $extraParams = []
-    )
-    {
+        $resourceIdentity = null,
+        array $extraParams = []
+    ) {
         assert($resourceIdentity === null || is_string($resourceIdentity) || is_int($resourceIdentity));
+
+        parent::__construct();
 
         $this->action = $action;
         $this->resourceType = $resourceType;

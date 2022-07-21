@@ -30,6 +30,7 @@ use Whoa\Contracts\Data\RelationshipTypes;
 use Whoa\Tests\Application\Data\Models\Comment;
 use Whoa\Tests\Application\Data\Models\CommentEmotion;
 use Whoa\Tests\Application\Data\Models\Emotion;
+use Whoa\Tests\Application\Data\Models\Model as BaseModel;
 use Whoa\Tests\Application\Data\Models\User;
 use Whoa\Tests\Application\TestCase;
 
@@ -45,6 +46,7 @@ class ModelSchemasTest extends TestCase
 
     /**
      * @inheritdoc
+     * @throws ReflectionException
      */
     protected function setUp(): void
     {
@@ -76,17 +78,17 @@ class ModelSchemasTest extends TestCase
             Comment::FIELD_ID,
             Comment::FIELD_ID_USER,
             Comment::FIELD_TEXT,
-            Models\Model::FIELD_CREATED_AT,
+            BaseModel::FIELD_CREATED_AT,
         ], $this->schemas->getAttributes(Comment::class));
         $this->assertEquals([], $this->schemas->getRawAttributes(Comment::class));
         $this->assertTrue($this->schemas->hasAttributeType(Comment::class, Comment::FIELD_TEXT));
         $this->assertFalse($this->schemas->hasAttributeType(Comment::class, 'non-existing-field'));
         $this->assertTrue($this->schemas->hasAttributeLength(Comment::class, Comment::FIELD_TEXT));
-        $this->assertFalse($this->schemas->hasAttributeLength(Comment::class, Models\Model::FIELD_CREATED_AT));
+        $this->assertFalse($this->schemas->hasAttributeLength(Comment::class, BaseModel::FIELD_CREATED_AT));
         $this->assertEquals(Types::STRING, $this->schemas->getAttributeType(Comment::class, Comment::FIELD_TEXT));
         $this->assertEquals(
             Types::DATE_MUTABLE,
-            $this->schemas->getAttributeType(Comment::class, Models\Model::FIELD_CREATED_AT)
+            $this->schemas->getAttributeType(Comment::class, BaseModel::FIELD_CREATED_AT)
         );
         $this->assertEquals(
             Comment::LENGTH_TEXT,
@@ -174,12 +176,18 @@ class ModelSchemasTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
 
         $this->schemas->registerClass(
-            '', Comment::TABLE_NAME, Comment::FIELD_ID, [
-            Comment::FIELD_ID => Types::INTEGER,
-            Comment::FIELD_ID_USER => Types::INTEGER,
-            Comment::FIELD_TEXT => Types::STRING,
-            Models\Model::FIELD_CREATED_AT => Types::DATE_MUTABLE,
-        ], [Comment::FIELD_TEXT => Comment::LENGTH_TEXT]
+            '',
+            Comment::TABLE_NAME,
+            Comment::FIELD_ID,
+            [
+                Comment::FIELD_ID => Types::INTEGER,
+                Comment::FIELD_ID_USER => Types::INTEGER,
+                Comment::FIELD_TEXT => Types::STRING,
+                BaseModel::FIELD_CREATED_AT => Types::DATE_MUTABLE,
+            ],
+            [
+                Comment::FIELD_TEXT => Comment::LENGTH_TEXT
+            ]
         );
     }
 
@@ -192,12 +200,18 @@ class ModelSchemasTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
 
         $this->schemas->registerClass(
-            Comment::class, '', Comment::FIELD_ID, [
-            Comment::FIELD_ID => Types::INTEGER,
-            Comment::FIELD_ID_USER => Types::INTEGER,
-            Comment::FIELD_TEXT => Types::STRING,
-            Comment::FIELD_CREATED_AT => Types::DATE_MUTABLE,
-        ], [Comment::FIELD_TEXT => Comment::LENGTH_TEXT]
+            Comment::class,
+            '',
+            Comment::FIELD_ID,
+            [
+                Comment::FIELD_ID => Types::INTEGER,
+                Comment::FIELD_ID_USER => Types::INTEGER,
+                Comment::FIELD_TEXT => Types::STRING,
+                BaseModel::FIELD_CREATED_AT => Types::DATE_MUTABLE,
+            ],
+            [
+                Comment::FIELD_TEXT => Comment::LENGTH_TEXT
+            ]
         );
     }
 
@@ -210,12 +224,18 @@ class ModelSchemasTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
 
         $this->schemas->registerClass(
-            Comment::class, Comment::TABLE_NAME, '', [
-            Comment::FIELD_ID => Types::INTEGER,
-            Comment::FIELD_ID_USER => Types::INTEGER,
-            Comment::FIELD_TEXT => Types::STRING,
-            Comment::FIELD_CREATED_AT => Types::DATE_MUTABLE,
-        ], [Comment::FIELD_TEXT => Comment::LENGTH_TEXT]
+            Comment::class,
+            Comment::TABLE_NAME,
+            '',
+            [
+                Comment::FIELD_ID => Types::INTEGER,
+                Comment::FIELD_ID_USER => Types::INTEGER,
+                Comment::FIELD_TEXT => Types::STRING,
+                BaseModel::FIELD_CREATED_AT => Types::DATE_MUTABLE,
+            ],
+            [
+                Comment::FIELD_TEXT => Comment::LENGTH_TEXT
+            ]
         );
     }
 
@@ -226,12 +246,18 @@ class ModelSchemasTest extends TestCase
     private function setUpStorage(): void
     {
         $this->schemas->registerClass(
-            Comment::class, Comment::TABLE_NAME, Comment::FIELD_ID, [
-            Comment::FIELD_ID => Types::INTEGER,
-            Comment::FIELD_ID_USER => Types::INTEGER,
-            Comment::FIELD_TEXT => Types::STRING,
-            Models\Model::FIELD_CREATED_AT => Types::DATE_MUTABLE,
-        ], [Comment::FIELD_TEXT => Comment::LENGTH_TEXT]
+            Comment::class,
+            Comment::TABLE_NAME,
+            Comment::FIELD_ID,
+            [
+                Comment::FIELD_ID => Types::INTEGER,
+                Comment::FIELD_ID_USER => Types::INTEGER,
+                Comment::FIELD_TEXT => Types::STRING,
+                BaseModel::FIELD_CREATED_AT => Types::DATE_MUTABLE,
+            ],
+            [
+                Comment::FIELD_TEXT => Comment::LENGTH_TEXT
+            ]
         );
 
         $this->registerTo1();

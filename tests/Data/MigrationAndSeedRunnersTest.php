@@ -47,10 +47,12 @@ use ReflectionMethod;
 class MigrationAndSeedRunnersTest extends TestCase
 {
     /** Path to migrations list */
-    public const MIGRATIONS_PATH = __DIR__ . DIRECTORY_SEPARATOR . 'Migrations' . DIRECTORY_SEPARATOR . 'migrations.php';
+    public const MIGRATIONS_PATH =
+        __DIR__ . DIRECTORY_SEPARATOR . 'Migrations' . DIRECTORY_SEPARATOR . 'migrations.php';
 
     /** Path to seeds list */
-    public const SEEDS_PATH = __DIR__ . DIRECTORY_SEPARATOR . 'Seeds' . DIRECTORY_SEPARATOR . 'seeds.php';
+    public const SEEDS_PATH =
+        __DIR__ . DIRECTORY_SEPARATOR . 'Seeds' . DIRECTORY_SEPARATOR . 'seeds.php';
 
     /**
      * Test migrations and Seeds.
